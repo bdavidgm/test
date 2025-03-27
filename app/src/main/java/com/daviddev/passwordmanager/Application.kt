@@ -7,6 +7,7 @@ import com.daviddev.passwordmanager.Room.AccountDataDataBase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
+
 class PasswordManager : Application() {
     // ... your code here ...
   /*  lateinit var database: AccountDataDataBase

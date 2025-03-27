@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.myapplication"
+    namespace = "com.daviddev.passwordmanager"
     compileSdk = 35
 
     //hilt
@@ -21,7 +21,7 @@ android {
     //end hilt
 
     defaultConfig {
-        applicationId = "com.example.PasswordManager"
+        applicationId = "com.daviddev.passwordmanager"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

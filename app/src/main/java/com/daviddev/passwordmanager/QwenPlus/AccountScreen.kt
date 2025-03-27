@@ -76,10 +76,10 @@ fun AccountScreen(addVM : AddAccountViewModel/*navController: NavController*/) {
                     onValueChange = { userName = it },
                     label = { Text("Nombre de usuario") },
                     modifier = Modifier.fillMaxWidth(),
-                    colors = TextFieldDefaults.outlinedTextFieldColors(
+                    /*colors = TextFieldDefaults.outlinedTextFieldColors(
                         focusedBorderColor = Color(0xFF2E7D32),
                         unfocusedBorderColor = Color.Gray
-                    )
+                    )*/
                 )
 
                 // Campo para la contraseña

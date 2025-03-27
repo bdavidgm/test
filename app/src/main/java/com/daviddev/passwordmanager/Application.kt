@@ -7,13 +7,12 @@ import com.daviddev.passwordmanager.Room.AccountDataDataBase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-
 class PasswordManager : Application() {
     // ... your code here ...
   /*  lateinit var database: AccountDataDataBase
         private set*/
 
-    override fun onCreate() {
+    /*override fun onCreate() {
         super.onCreate()
         Log.i("Seguimiento","Clase de la aplicación PasswordManager creada." )
         /*database = Room.databaseBuilder(
@@ -21,5 +20,5 @@ class PasswordManager : Application() {
             AccountDataDataBase::class.java,
             "AccountData.db" // Your database file name
         ).build()*/
-    }
+    }*/
 }

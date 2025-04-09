@@ -27,10 +27,10 @@ interface AccountDataDatabaseDao {
     fun getAccountDataById(id: Long): Flow<AccountData>
 
     @Query("SELECT * FROM AccountData WHERE account_id = :accountId ORDER BY creation_date DESC LIMIT 1")
-    suspend fun getLastAccountData(accountId: Long): Flow<AccountData>
+    fun getLastAccountData(accountId: Long): Flow<AccountData>
 
     @Query("SELECT * FROM AccountData WHERE account_id = :accountId ORDER BY creation_date DESC")
-    suspend fun getAllAccountData(accountId: Long): Flow<List<AccountData>>
+    fun getAllAccountData(accountId: Long): Flow<List<AccountData>>
 
    /* @Query("SELECT account_id FROM AccountName WHERE account_name = :accountName")
     suspend fun getAccountID(accountName: String): Long

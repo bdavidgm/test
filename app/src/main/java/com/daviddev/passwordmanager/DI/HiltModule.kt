@@ -1,5 +1,5 @@
 package com.daviddev.passwordmanager.DI
-//com.example.myapplication.DI.HiltModule.kt
+
 import com.daviddev.passwordmanager.Room.AccountDataDataBase
 import com.daviddev.passwordmanager.Room.AccountDataDatabaseDao
 
@@ -27,7 +27,7 @@ object AppModule {
     fun providesAccountDataDataBase(@ApplicationContext context : Context): AccountDataDataBase {
         return Room.databaseBuilder(
             context,
-            AccountDataDataBase::class.java, "AccountData.db"
+            AccountDataDataBase::class.java, "AccountData"
         ).fallbackToDestructiveMigration()
             .build()
     }

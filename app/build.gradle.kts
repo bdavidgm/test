@@ -64,9 +64,8 @@ dependencies {
     implementation("androidx.room:room-runtime:$room_version")
 
 
-    // If this project only uses Java source, use the Java annotationProcessor
-    // No additional plugins are necessary
-    annotationProcessor("androidx.room:room-compiler:$room_version")
+   //kapt
+    kapt("androidx.room:room-compiler:$room_version")
 
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation("androidx.room:room-ktx:$room_version")
@@ -111,4 +110,6 @@ kapt {
     correctErrorTypes = true
 }
 //end hilt
+
+
 

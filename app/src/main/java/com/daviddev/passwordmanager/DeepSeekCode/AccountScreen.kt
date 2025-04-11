@@ -11,8 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
-import com.daviddev.passwordmanager.Model.AccountData
-import com.daviddev.passwordmanager.Model.AccountName
+import com.daviddev.passwordmanager.Model.KeyValueAccountData
 import java.time.LocalDateTime
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -78,25 +77,27 @@ fun AccountScreen() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = {
-                    // Handle save action
-                    val accountData = AccountData(
-                        account_id = 0, // This should be generated or fetched
-                        user_name = userName,
-                        password = password,
-                        creation_date = LocalDateTime.now(),
-                        expiration_date = expirationDate.plusDays(daysValid.toLong())
-                    )
-                   val accountNameData = AccountName(
-                        account_name = accountName
-                    )
-                    // Save or process the data
-                },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Save")
-            }
-        }
+                 onClick = {/*
+                   // Handle save action
+
+                   val accountData = AccountData(
+                       account_id = 0, // This should be generated or fetched
+                       user_name = userName,
+                       password = password,
+                       creation_date = LocalDateTime.now(),
+                       expiration_date = expirationDate.plusDays(daysValid.toLong())
+                   )
+                  val accountNameData = AccountName(
+                       account_name = accountName
+                   )
+                   // Save or process the data
+                     */
+               },
+               modifier = Modifier.fillMaxWidth()
+           ) {
+               Text("Save")
+           }
+       }
     }
 }
 

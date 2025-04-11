@@ -7,6 +7,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.time.LocalDateTime
 
+
+/*
 @Entity(tableName = "AccountData")
 data class AccountData(
     @PrimaryKey(autoGenerate = true)
@@ -36,25 +38,30 @@ data class AccountName(
     @ColumnInfo(name = "account_name")
     val account_name: String
 )
-/*
-data class AccountDataAll(
 
+*/
+@Entity(tableName = "KeyValueAccountData")
+data class KeyValueAccountData(
+
+
+    @PrimaryKey(autoGenerate = true)
     val id : Long = 0,
 
-
+    @ColumnInfo(name = "account_id")
     val account_id : Long =0,
 
-    val user_name: String="",
+    @ColumnInfo(name = "key")
+    val key: String,
 
+    @ColumnInfo(name = "value")
+    val value: String,
 
-    val password: String="",
+    @ColumnInfo(name = "status")
+    val status: String,
 
+    @ColumnInfo(name = "type")
+    val type: String,
 
-    val creation_date : LocalDateTime = LocalDateTime.now(),
-
-
-    val expiration_date : LocalDateTime = LocalDateTime.now(),
-
-
-    val account_name: String = ""
-)*/
+    @ColumnInfo(name = "creation_date")
+    val creation_date : LocalDateTime = LocalDateTime.now()
+    )

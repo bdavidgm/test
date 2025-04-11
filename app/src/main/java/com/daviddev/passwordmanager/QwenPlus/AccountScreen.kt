@@ -12,8 +12,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 //import androidx.navigation.NavController
-import com.daviddev.passwordmanager.Model.AccountData
-import com.daviddev.passwordmanager.Model.AccountName
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
@@ -163,7 +161,7 @@ fun AccountScreen(addVM : AddAccountViewModel/*navController: NavController*/) {
                             }
                         }
 
-                        val accountData = AccountData(
+                       /* val accountData = AccountData(
                             account_id = 0, // ID generado automáticamente
                             user_name = userName,
                             password = password,
@@ -173,7 +171,7 @@ fun AccountScreen(addVM : AddAccountViewModel/*navController: NavController*/) {
                        val accountNameData = AccountName(
                             account_id = 0, // ID generado automáticamente
                             account_name = accountName
-                        )
+                        )*/
 
                         // Aquí puedes agregar la lógica para guardar los datos en la base de datos
                     },

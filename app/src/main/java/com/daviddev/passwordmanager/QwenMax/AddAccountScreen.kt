@@ -11,8 +11,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 //import androidx.navigation.NavController
-import com.daviddev.passwordmanager.Model.AccountData
-import com.daviddev.passwordmanager.Model.AccountName
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import androidx.compose.material.icons.Icons
@@ -120,7 +118,7 @@ fun AccountScreen(/*navController: NavController*/) {
                     onClick = {
                         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
                         val parsedExpirationDate = LocalDateTime.parse(expirationDate, formatter)
-                        val accountData = AccountData(
+                       /* val accountData = AccountData(
                             account_id = 0, // ID generado automáticamente
                             user_name = userName,
                             password = password,
@@ -130,7 +128,7 @@ fun AccountScreen(/*navController: NavController*/) {
                         val accountNameData = AccountName(
                             account_id = 0, // ID generado automáticamente
                             account_name = accountName
-                        )
+                        )*/
                         // Aquí puedes agregar la lógica para guardar los datos en la base de datos
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF2E7D32))

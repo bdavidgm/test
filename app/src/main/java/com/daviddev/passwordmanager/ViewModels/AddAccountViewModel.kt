@@ -15,7 +15,7 @@ class AddAccountViewModel  @Inject constructor(private val repository: accountDa
     init{
         Log.i("Seguimiento","desde el constructor de AddAccountViewModel ." )
     }
-   var accountData = mutableStateOf(KeyValueAccountData())
+  // var accountData = mutableStateOf(KeyValueAccountData())
 
 
 

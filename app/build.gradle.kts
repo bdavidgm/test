@@ -13,6 +13,11 @@ android {
     namespace = "com.daviddev.passwordmanager"
     compileSdk = 35
 
+    //Material 3
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.1.1"
+    }
+
     //hilt
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -52,6 +57,9 @@ android {
 }
 
 dependencies {
+
+    implementation("androidx.compose.material3:material3:1.1.2")
+
     //hilt
     implementation("com.google.dagger:hilt-android:2.51.1")
     //implementation(libs.androidx.navigation.runtime.ktx)
@@ -85,8 +93,15 @@ dependencies {
     // optional - Paging 3 Integration
     implementation("androidx.room:room-paging:$room_version")
     //end room
+//compose material 3
+    implementation("androidx.compose.material3:material3:1.3.2")
+    implementation("androidx.compose.material3:material3-window-size-class:1.3.2")
+    implementation("androidx.compose.material3:material3-adaptive-navigation-suite:1.4.0-alpha12")
 
-    implementation("androidx.compose.material:material-icons-extended:1.5.4")
+    //material 3 icons
+    implementation("androidx.compose.material:material-icons-core:1.7.0")
+    //implementation(androidx.compose.material:material-icons-extended:1.7.0") // Opcional, para íconos extendidos
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

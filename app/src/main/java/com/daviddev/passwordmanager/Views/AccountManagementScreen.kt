@@ -1,6 +1,8 @@
 package com.daviddev.passwordmanager.Views
 
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -8,9 +10,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.graphics.Color
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.DateRange
-import androidx.compose.material.icons.filled.Add
+//import androidx.compose.material.icons.Icons
+//import androidx.compose.material.icons.filled.DateRange
+//import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.text.font.FontWeight
 import java.time.LocalDateTime
@@ -159,7 +161,7 @@ fun AccountManagementScreen(
                     containerColor = MaterialTheme.colorScheme.primary
                 )
             ) {
-                Icon(Icons.Default.Add, contentDescription = "Guardar")
+                //Icon(Icons.Default.Add, contentDescription = "Guardar")
                 Text(
                     "Guardar cuenta",
                     modifier = Modifier.padding(start = 8.dp),

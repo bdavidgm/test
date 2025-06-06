@@ -1,10 +1,4 @@
 package com.daviddev.passwordmanager.room
-//
-//com.example.myapplication.Room.AccountDataRepository.kt
-//com.example.myapplication.Room.AccountDataBase.kt
-//com.example.myapplication.Model.RoomTable.kt
-//com.example.myapplication.DI.HiltModule.kt
-
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -13,7 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
-import com.daviddev.passwordmanager.Model.KeyValueAccountData
+import com.daviddev.passwordmanager.room.model.KeyValueAccountData
 
 
 @Dao // Data Access Observer

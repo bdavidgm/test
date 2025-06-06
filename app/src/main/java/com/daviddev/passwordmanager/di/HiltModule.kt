@@ -26,10 +26,10 @@ object AppModule {
     @Provides
     fun providesAccountDataDataBase(@ApplicationContext context : Context): AccountDataDataBase {
         return Room.databaseBuilder(
-            context,
-            AccountDataDataBase::class.java, "AccountData"
-        ).fallbackToDestructiveMigration()
-            .build()
+            context = context,
+            AccountDataDataBase::class.java,
+            name = "AccountData"
+        ).build()
     }
 
 }

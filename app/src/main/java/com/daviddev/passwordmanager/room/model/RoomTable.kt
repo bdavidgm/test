@@ -1,6 +1,4 @@
-package com.daviddev.passwordmanager.Model
-//com.example.myapplication.Model.RoomTable.kt
-
+package com.daviddev.passwordmanager.room.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
@@ -15,7 +13,7 @@ data class KeyValueAccountData(
     val id : Long = 0,
 
     @ColumnInfo(name = "account_id")
-    val account_id : Long =0,
+    val accountId : Long =0,
 
     @ColumnInfo(name = "key")
     val key: String,
@@ -30,6 +28,6 @@ data class KeyValueAccountData(
     val type: String,
 
     @ColumnInfo(name = "creation_date")
-    val creation_date : LocalDateTime = LocalDateTime.now()
+    val creationDate : LocalDateTime = LocalDateTime.now()
 
     )

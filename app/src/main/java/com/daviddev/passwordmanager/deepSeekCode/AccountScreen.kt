@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import com.daviddev.passwordmanager.ui.theme.PasswordManagerTheme
 import java.time.LocalDateTime
 //import androidx.compose.material.icons.Icons
 //import androidx.compose.material.icons.filled.ArrowBack
@@ -102,7 +103,7 @@ fun AccountScreen() {
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
-    MyApplicationTheme {
+    PasswordManagerTheme {
         AccountScreen()
     }
 }

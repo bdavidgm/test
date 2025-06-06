@@ -33,7 +33,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import com.daviddev.passwordmanager.Model.KeyValueAccountData
+import com.daviddev.passwordmanager.room.model.KeyValueAccountData
 import com.daviddev.passwordmanager.constants.DataType
 
 

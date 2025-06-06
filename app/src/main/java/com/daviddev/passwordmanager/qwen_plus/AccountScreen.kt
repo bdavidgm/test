@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.QwenPlus
+package com.daviddev.passwordmanager.qwen_plus
 
 import android.util.Log
 import androidx.compose.foundation.layout.*
@@ -20,7 +20,7 @@ import java.time.temporal.ChronoUnit
 //import androidx.compose.material.icons.Icons
 //import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import com.daviddev.passwordmanager.ViewModels.AddAccountViewModel
+import com.daviddev.passwordmanager.viewmodels.AddAccountViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

@@ -1,11 +1,4 @@
-package com.daviddev.passwordmanager.Views
-
-import androidx.compose.material3.Button
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.window.Dialog
+package com.daviddev.passwordmanager.views
 
 import com.daviddev.passwordmanager.R
 import androidx.compose.foundation.background
@@ -43,11 +36,11 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun ShowDataRow(i: Int = 0)
 {
-    content(i)
+    Content(i)
 }
 
 @Composable
-fun showDataCard(i: Int = 0)
+fun ShowDataCard(i: Int = 0)
 {
     OutlinedCard(
         //colors = CardDefaults.cardColors( containerColor = MaterialTheme.colorScheme.onTertiaryContainer ),
@@ -58,11 +51,11 @@ fun showDataCard(i: Int = 0)
             .fillMaxWidth() // Make cards take full width
             .height(90.dp) // Adjust height as needed
     ) {
-        content(i)
+        Content(i)
     }
 }
 @Composable
-fun content(i: Int = 0)
+fun Content(i: Int = 0)
 {
     val textsize = 15
 

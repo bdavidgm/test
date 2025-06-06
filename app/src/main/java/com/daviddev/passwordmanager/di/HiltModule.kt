@@ -1,7 +1,7 @@
-package com.daviddev.passwordmanager.DI
+package com.daviddev.passwordmanager.di
 
-import com.daviddev.passwordmanager.Room.AccountDataDataBase
-import com.daviddev.passwordmanager.Room.AccountDataDatabaseDao
+import com.daviddev.passwordmanager.room.AccountDataDataBase
+import com.daviddev.passwordmanager.room.AccountDataDatabaseDao
 
 import android.content.Context
 import androidx.room.Room

@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.Room
+package com.daviddev.passwordmanager.room
 
 import androidx.room.TypeConverter
 import java.time.LocalDateTime

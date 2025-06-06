@@ -1,8 +1,5 @@
-package com.daviddev.passwordmanager.DeepSeekCode
+package com.daviddev.passwordmanager.deepSeekCode
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -13,7 +10,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
-import com.daviddev.passwordmanager.Model.KeyValueAccountData
 import java.time.LocalDateTime
 //import androidx.compose.material.icons.Icons
 //import androidx.compose.material.icons.filled.ArrowBack

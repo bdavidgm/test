@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.QwenMax
+package com.daviddev.passwordmanager.qwen_max
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions

@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.Views
+package com.daviddev.passwordmanager.views
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize

@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.DeepSeekCode
+package com.daviddev.passwordmanager.deepSeekCode
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.lightColorScheme

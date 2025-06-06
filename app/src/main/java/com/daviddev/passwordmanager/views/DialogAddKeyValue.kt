@@ -1,10 +1,9 @@
-package com.daviddev.passwordmanager.Views
+package com.daviddev.passwordmanager.views
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -21,7 +20,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -31,7 +29,7 @@ import com.daviddev.passwordmanager.R
 import com.daviddev.passwordmanager.constants.DataType
 
 @Composable
-fun dialogAddKeyValue (show:Boolean = true, onDismissRequest:()-> Unit, onConfirm:()->Unit,key:String,onKeyChange:(String)->Unit,onOptionSeleted: (DataType) -> Unit){
+fun DialogAddKeyValue (show:Boolean = true, onDismissRequest:()-> Unit, onConfirm:()->Unit, key:String, onKeyChange:(String)->Unit, onOptionSeleted: (DataType) -> Unit){
     var menuExpanded by remember { mutableStateOf(false) }
     //var key by remember { mutableStateOf("") }
     var value by remember { mutableStateOf("") }
@@ -76,7 +74,7 @@ fun dialogAddKeyValue (show:Boolean = true, onDismissRequest:()-> Unit, onConfir
                         modifier = Modifier.fillMaxWidth().padding(start=10.dp,end=10.dp),
 
                     )
-                    addItemMenu(menuExpanded,{ menuExpanded = !menuExpanded },{ menuExpanded = false },onOptionSeleted)
+                    AddItemMenu(menuExpanded,{ menuExpanded = !menuExpanded },{ menuExpanded = false },onOptionSeleted)
 
                     /* Divider(
                          modifier = Modifier.padding(top = 0.dp,bottom = 0.dp), // Optional horizontal padding

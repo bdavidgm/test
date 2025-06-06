@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.Room
+package com.daviddev.passwordmanager.room
 
 //com.example.myapplication.Room.DatabaseDAO
 

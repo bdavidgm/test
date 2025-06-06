@@ -1,9 +1,6 @@
 package com.daviddev.passwordmanager
 
 import android.app.Application
-import android.util.Log
-import androidx.room.Room
-import com.daviddev.passwordmanager.Room.AccountDataDataBase
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp

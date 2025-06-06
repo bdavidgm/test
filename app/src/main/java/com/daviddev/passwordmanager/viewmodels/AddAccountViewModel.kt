@@ -1,12 +1,9 @@
-package com.daviddev.passwordmanager.ViewModels
+package com.daviddev.passwordmanager.viewmodels
 
 import android.util.Log
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
-import com.daviddev.passwordmanager.Model.KeyValueAccountData
-import com.daviddev.passwordmanager.Room.accountDataRepository
+import com.daviddev.passwordmanager.room.accountDataRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import java.time.Instant.now
 import javax.inject.Inject
 
 

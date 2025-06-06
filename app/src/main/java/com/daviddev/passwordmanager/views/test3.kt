@@ -1,36 +1,27 @@
+package com.daviddev.passwordmanager.views
 
-package com.daviddev.passwordmanager.Views
 
-import com.daviddev.passwordmanager.R
-import androidx.compose.foundation.background
-import androidx.compose.foundation.border
+
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.Settings
-import androidx.compose.material.icons.outlined.Create
 import androidx.compose.material3.BottomAppBar
-import androidx.compose.material3.Divider
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -43,18 +34,10 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults.topAppBarColors
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
-import androidx.compose.ui.tooling.preview.Preview
 
-
-@Preview(showBackground = true)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun test2() {
+fun Test3() {
     //var presses by remember{ mutableIntStateOf(0) }
     val scrollState = rememberScrollState()
     val gradient =
@@ -69,17 +52,19 @@ fun test2() {
         topBar = {
             TopAppBar(
                 colors = topAppBarColors(
-                    containerColor = colorResource(id = R.color.SecondaryColor),//MaterialTheme.colorScheme.primaryContainer,
-                    titleContentColor = colorResource(id = R.color.Verde1)//MaterialTheme.colorScheme.primarycolorResource(id = R.color.Azul1)
+                    containerColor = MaterialTheme.colorScheme.primaryContainer,
+                    titleContentColor = MaterialTheme.colorScheme.primary,
                 ),
                 title = {
-                    Text(color=colorResource(id= R.color.TextPrimaryColor), text ="Data Manager", fontWeight = FontWeight.Bold)
+                    Text("Top app bar")
                 },
                 actions = {
                     // Add icons and actions here
                     IconButton(onClick = { /* Handle search action */ }) {
                         Icon(Icons.Default.Search, contentDescription = "Search")
                     }
+
+                    Text("Top app bar")
 
                     IconButton(onClick = { /* Handle settings action */ }) {
                         Icon(Icons.Default.Settings, contentDescription = "Settings")
@@ -89,22 +74,16 @@ fun test2() {
         },
         bottomBar = {
             BottomAppBar(
-                containerColor = colorResource(id = R.color.PrimaryColor),
-                contentColor = MaterialTheme.colorScheme.primary,
-                modifier = Modifier.height(60.dp),
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+                contentColor = MaterialTheme.colorScheme.primary
             ) {
-                Row(
+                Text(
                     modifier = Modifier
-                        .fillMaxSize()
-                        .padding(horizontal = 16.dp), // Adjust horizontal padding as needed
-                    horizontalArrangement = Arrangement.Center,
-                    verticalAlignment = Alignment.CenterVertically
-
-                ) {
-                    RoundAddButton(onClick = { println("Add button clicked!") },25,Icons.Filled.Add)
-                    RoundAddButton(onClick = { println("Add button clicked!") }, icon = Icons.Filled.Add)
-                    RoundAddButton(onClick = { println("Add button clicked!") },25, icon = Icons.Filled.Add)
-                }
+                        .fillMaxWidth()
+                        .height(40.dp),
+                    textAlign = TextAlign.Center,
+                    text = "Bottom app bar",
+                )
             }
         },
         floatingActionButton = {
@@ -114,18 +93,33 @@ fun test2() {
         }
     ) { innerPadding ->
         Column( modifier = Modifier
-        .verticalScroll(scrollState)
-        .fillMaxSize() // Occupy the entire screen
-        .padding(start = 20.dp, top = 100.dp, bottom = 150.dp, end = 20.dp ), // Add some padding around the column
-        verticalArrangement = Arrangement.spacedBy(20.dp), // Adjust spacing as needed
-        horizontalAlignment = Alignment.CenterHorizontally // Center content horizontally
+            .verticalScroll(scrollState)
+            .fillMaxSize() // Occupy the entire screen
+            .padding(start = 20.dp, top = 100.dp, bottom = 150.dp, end = 20.dp ), // Add some padding around the column
+            verticalArrangement = Arrangement.spacedBy(20.dp), // Adjust spacing as needed
+            horizontalAlignment = Alignment.CenterHorizontally // Center content horizontally
         ){
             // fim
             for (i in 1..20) {
-                com.daviddev.passwordmanager.Views.ShowDataRow(i)
-                //showDataCard(i)
+                ElevatedCard(
+                    colors = CardDefaults.cardColors( containerColor = MaterialTheme.colorScheme.surfaceContainer ),
+                    elevation = CardDefaults.cardElevation(
+                        defaultElevation = 6.dp
+                    ),
+                    modifier = Modifier
+                        .fillMaxWidth() // Make cards take full width
+                        .height(100.dp) // Adjust height as needed
+                ) {
+                    Text(
+                        text = "Outlined $i",
+                        modifier = Modifier.padding(16.dp),
+                        textAlign = TextAlign.Center,
+                    )
+                }
+            }
         }
-    }
 
     }
 }
+
+

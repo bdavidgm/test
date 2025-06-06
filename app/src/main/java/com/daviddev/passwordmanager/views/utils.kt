@@ -1,4 +1,4 @@
-package com.daviddev.passwordmanager.Views
+package com.daviddev.passwordmanager.views
 
 //
 
@@ -15,7 +15,7 @@ import com.daviddev.passwordmanager.constants.DataType
 
 
 @Composable
-fun getComposableType(type: DataType, source: String, label: String="",onChange:(String) -> Unit) {
+fun GetComposableType(type: DataType, source: String, label: String="",onChange:(String) -> Unit) {
     when(type) {
         DataType.TEXT -> {
             OutlinedTextField(
@@ -53,7 +53,7 @@ fun getComposableType(type: DataType, source: String, label: String="",onChange:
 }
 
 @Composable
-fun enterKey( ) {
+fun EnterKey( ) {
     var showDialog by remember { mutableStateOf(false) }
 
 }

@@ -1,9 +1,8 @@
-package com.daviddev.passwordmanager.Views
+package com.daviddev.passwordmanager.views
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.MoreVert
@@ -18,7 +17,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.DpOffset
@@ -26,7 +24,7 @@ import androidx.compose.ui.unit.dp
 import com.daviddev.passwordmanager.constants.DataType
 
 @Composable
-fun addItemMenu(expanded: Boolean,onClick: () -> Unit,onDismissRequest: () -> Unit,onOptionSeleted: (DataType) -> Unit  ){
+fun AddItemMenu(expanded: Boolean, onClick: () -> Unit, onDismissRequest: () -> Unit, onOptionSeleted: (DataType) -> Unit  ){
     var text by remember { mutableStateOf("Nombre de elemento") }
     Box(
         modifier = Modifier

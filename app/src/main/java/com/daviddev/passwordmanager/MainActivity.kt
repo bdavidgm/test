@@ -17,6 +17,7 @@ import androidx.lifecycle.ViewModel
 import com.daviddev.passwordmanager.DeepSeekCode.AccountScreen
 import com.daviddev.passwordmanager.ViewModels.AddAccountViewModel
 import com.daviddev.passwordmanager.Views.AccountManagementScreen
+import com.daviddev.passwordmanager.Views.AddDataView
 import com.daviddev.passwordmanager.Views.PasswordManagerView
 import com.daviddev.passwordmanager.Views.dropdowntest
 import com.daviddev.passwordmanager.ui.theme.PasswordManagerTheme
@@ -36,12 +37,9 @@ class MainActivity : ComponentActivity() {
             PasswordManagerTheme{
                 val pairList = listOf(Pair("lolo", "123"))
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                   // AccountManagementScreen(onSaveAccount = saveAccount)
-                    //com.daviddev.passwordmanager.DeepSeekCode.AccountScreen()
-                    //com.daviddev.passwordmanager.QwenMax.AccountScreen()
-                   // com.daviddev.passwordmanager.QwenPlus.AccountScreen(addVM)
-                    //dropdowntest()
-                    test2()
+                    com.daviddev.passwordmanager.Views.AddDataView();
+                    //com.daviddev.passwordmanager.Views.test2()
+                    Log.i("Seguimiento","Main activity dentro del scaffold" )
                 }
             }
         }

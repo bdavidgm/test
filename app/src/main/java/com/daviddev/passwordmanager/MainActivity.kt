@@ -12,8 +12,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.daviddev.passwordmanager.navigation.NavManager
 import com.daviddev.passwordmanager.viewmodels.AddAccountViewModel
 import com.daviddev.passwordmanager.ui.theme.PasswordManagerTheme
+import com.daviddev.passwordmanager.viewmodels.SelectTemplateViewModel
+import com.daviddev.passwordmanager.viewmodels.ShowAccountsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalDateTime
 
@@ -23,14 +26,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         Log.i("Seguimiento","MainActivity creada." )
         val addVM : AddAccountViewModel by viewModels( )
-        Log.i("Seguimiento","AddAccountViewModel creado." )
+        val showVM : ShowAccountsViewModel by viewModels( )
+        Log.i("Seguimiento","ShowAccountsViewModel creado." )
+        val templateVM: SelectTemplateViewModel by viewModels( )
+        Log.i("Seguimiento","SelectTemplateViewModel creado." )
+
         enableEdgeToEdge()
         setContent {
             PasswordManagerTheme{
                 val pairList = listOf(Pair("lolo", "123"))
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    com.daviddev.passwordmanager.views.AddDataView();
-                    //com.daviddev.passwordmanager.Views.test2()
+                   //com.daviddev.passwordmanager.views.AddDataView(addVM);
+                   //com.daviddev.passwordmanager.views.showAccountsView(showVM)
+                    NavManager(addVM,showVM,templateVM)
                     Log.i("Seguimiento","Main activity dentro del scaffold" )
                 }
             }

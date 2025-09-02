@@ -16,18 +16,17 @@ data class KeyValueAccountData(
     val accountId : Long =0,
 
     @ColumnInfo(name = "key")
-    val key: String,
+    val key: String="",
 
     @ColumnInfo(name = "value")
-    val value: String,
+    var value: String="",
 
     @ColumnInfo(name = "status")
-    val status: String,
+    var status: String="",
 
     @ColumnInfo(name = "type")
-    val type: String,
+    val type: String="",
 
     @ColumnInfo(name = "creation_date")
     val creationDate : LocalDateTime = LocalDateTime.now()
-
     )

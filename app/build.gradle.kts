@@ -14,14 +14,9 @@ android {
         kotlinCompilerExtensionVersion = "1.1.1"
     }
 
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-
     defaultConfig {
         applicationId = "com.daviddev.passwordmanager"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -51,8 +46,6 @@ android {
 }
 
 dependencies {
-
-
     //compose material 3
     implementation(libs.androidx.compose.material3.material3)
     implementation(libs.androidx.material3.adaptive.navigation.suite)
@@ -73,6 +66,7 @@ dependencies {
 
     //hilt dependencies
     implementation(libs.hilt.android)
+    implementation(libs.androidx.navigation.compose.android)
     ksp(libs.hilt.compiler)
 
     //room dependencies
